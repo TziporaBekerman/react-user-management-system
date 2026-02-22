@@ -27,7 +27,7 @@ A full-stack CRUD application built with React and JSON Server, featuring a cust
 
 ## Project Structure
 ```
-project6/
+react-user-management-system/
 ├── react6/
 │   ├── src/
 │   │   ├── components/
@@ -36,10 +36,12 @@ project6/
 │   │   │   └── common/     # Reusable components
 │   │   ├── hooks/          # Custom React hooks
 │   │   └── css/
+│   ├── .env.example        # Environment variables template
 │   └── package.json
 └── jsonserver/
     ├── db.json             # Database
-    └── images/
+    ├── images/             # Photo assets
+    └── package.json
 ```
 
 ## Getting Started
@@ -47,13 +49,14 @@ project6/
 ### Prerequisites
 * Node.js installed
 * npm
+* Create a `.env` file in the `react6/` folder based on `.env.example`
 
 ### Installation
 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd project6
+cd react-user-management-system
 ```
 
 2. Install frontend dependencies:
@@ -62,26 +65,32 @@ cd react6
 npm install
 ```
 
-3. Install JSON Server:
+3. Create environment file:
 ```bash
-npm install -g json-server
+cp .env.example .env
+```
+
+4. Install JSON Server dependencies:
+```bash
+cd ../jsonserver
+npm install
 ```
 
 ### Running the Application
 
-1. Start JSON Server (port 3000):
+1. Start JSON Server (from `jsonserver/` folder):
 ```bash
 cd jsonserver
-json-server --watch db.json --port 3000
+npm run json:server
 ```
 
-2. Start React development server:
+2. Start React development server (from `react6/` folder):
 ```bash
 cd react6
 npm run dev
 ```
 
-3. Open `http://localhost:5173`
+3. Open `http://localhost:5173` in your browser
 
 ## Database Schema
 
@@ -97,3 +106,7 @@ npm run dev
 ## Author
 
 Developed as part of a full-stack development course.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
