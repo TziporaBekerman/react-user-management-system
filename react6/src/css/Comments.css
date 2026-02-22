@@ -1,0 +1,134 @@
+@import './variables.css';
+
+.comments-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--spacing-xl);
+    background: var(--primary-gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comments-container h1 {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: var(--shadow-sm);
+    font-weight: 300;
+}
+
+.comments-container h2 {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 2rem;
+    margin: var(--spacing-lg) 0;
+    text-shadow: var(--shadow-sm);
+    font-weight: 300;
+}
+
+.comments-container button {
+    background: var(--danger-gradient);
+    color: var(--text-white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+}
+
+.comments-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.post-preview {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.post-preview h1 {
+    color: var(--text-dark);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: none;
+}
+
+.post-preview p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comments-list li {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: 25px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-fast);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.comments-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.comments-list li p {
+    color: var(--text-dark);
+    font-size: 16px;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.5;
+}
+
+.comments-list li small {
+    color: var(--border-focus);
+    font-weight: 600;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 5px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.comments-list li input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    outline: none;
+    transition: var(--transition-fast);
+    background: var(--bg-white);
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.comments-list li input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.comments-list li button {
+    margin: 5px 5px 0 0;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+/* השתמש בסגנונות משותפים מ-variables.css */

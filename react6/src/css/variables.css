@@ -1,0 +1,242 @@
+/* משתנים גלובליים */
+:root {
+    /* צבעים */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --danger-gradient: linear-gradient(45deg, #e74c3c, #c0392b);
+    --success-gradient: linear-gradient(45deg, #2ecc71, #27ae60);
+    --info-gradient: linear-gradient(45deg, #3498db, #2980b9);
+    --warning-gradient: linear-gradient(45deg, #f39c12, #e67e22);
+    --purple-gradient: linear-gradient(45deg, #9b59b6, #8e44ad);
+    
+    /* צבעי טקסט */
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --text-white: white;
+    
+    /* צבעי רקע */
+    --bg-white: white;
+    --bg-light: rgba(255, 255, 255, 0.95);
+    --bg-transparent: rgba(255, 255, 255, 0.1);
+    
+    /* גבולות */
+    --border-light: #e0e0e0;
+    --border-focus: #3498db;
+    
+    /* רדיוסים */
+    --radius-sm: 15px;
+    --radius-md: 20px;
+    --radius-lg: 25px;
+    --radius-xl: 50px;
+    
+    /* צללים */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+    
+    /* מרווחים */
+    --spacing-xs: 10px;
+    --spacing-sm: 15px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    
+    /* טרנזישנים */
+    --transition-fast: all 0.3s ease;
+    --transition-medium: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* סגנונות כפתורים משותפים */
+.btn {
+    border: none;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-danger {
+    background: var(--danger-gradient);
+    color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.btn-success {
+    background: var(--success-gradient);
+    color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-success:hover {
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.btn-info {
+    background: var(--info-gradient);
+    color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-info:hover {
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* סגנונות קלט משותפים */
+.input-field {
+    padding: 12px 25px;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    font-size: 15px;
+    outline: none;
+    transition: var(--transition-fast);
+    background: var(--bg-white);
+}
+
+.input-field:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* סגנונות קונטיינר משותפים */
+.page-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--spacing-xl);
+    background: var(--primary-gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xl);
+    text-shadow: var(--shadow-sm);
+    font-weight: 300;
+}
+
+.card {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* סגנונות רשימות משותפים */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-fast);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* סגנון הודעות שגיאה */
+.error-message {
+    background: var(--danger-gradient);
+    color: var(--text-white);
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.error-close {
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* סגנון הוספת תוכן */
+.add {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add input,
+.add textarea {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px 25px;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    outline: none;
+    transition: var(--transition-fast);
+    background: var(--bg-white);
+}
+
+.add textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 100px;
+}
+
+.add input:focus,
+.add textarea:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.add button {
+    background: var(--success-gradient);
+    color: var(--text-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}

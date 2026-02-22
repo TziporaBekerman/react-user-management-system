@@ -1,0 +1,200 @@
+@import './variables.css';
+
+.todos-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--spacing-xl);
+    background: var(--primary-gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todos-container h1 {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xl);
+    text-shadow: var(--shadow-sm);
+    font-weight: 300;
+}
+
+.todos-container > button {
+    background: var(--danger-gradient);
+    color: var(--text-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: var(--spacing-lg);
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.todos-container > button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.todos-container > div {
+    background: var(--bg-white);
+    padding: 25px 35px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.todos-container > div label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 16px;
+}
+
+.todos-container > div select {
+    padding: 12px 20px;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    font-size: 15px;
+    outline: none;
+    transition: var(--transition-fast);
+    background: var(--bg-white);
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.todos-container > div select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.todos-container > div input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 25px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.todos-container > div input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.todos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todos-list > li {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-fast);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.todos-list > li:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.todos-list > li > p {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    min-width: 200px;
+}
+
+.todos-list > li > input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.todos-list > li > div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.todos-list > li > div input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.todos-list > li > div input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.todos-list > li > div button {
+    background: var(--info-gradient);
+    color: var(--text-white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.todos-list > li > div button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.todos-list > li > button {
+    background: var(--danger-gradient);
+    color: var(--text-white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.todos-list > li > button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* השתמש בסגנונות משותפים מ-variables.css */
