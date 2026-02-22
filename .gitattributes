@@ -1,5 +1,6 @@
 *.jsx linguist-language=JavaScript
 *.js linguist-language=JavaScript
 *.css linguist-language=CSS
-*.json linguist-language=JSON
+jsonserver/* linguist-vendored
+jsonserver/db.json linguist-generated=true
 jsonserver/images/* linguist-vendored
